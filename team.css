@@ -1,111 +1,167 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta name="viewport" content="with-device-width, initial-scale=1.0">
-        <title>
-            The Team
-        </title>
-        <link rel="stylesheet" href="team.css">
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Source Sans Pro', sans-serif;
 
+}
+.header{
+    min-height: 100vh; 
+    width: 100%;
+    background-image:linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(photos/banner.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
 
-        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@900&display=swap" rel="stylesheet">
-        <section class="header">
-            <nav>
-                <a href="index.html"><img src="photos/logo_website.png"></a>
-                <div class="nav-links">
-                    <ul>
-                        <li><a href="capstone-website.html">HOME</a></li>
-                        <li><a href="progress.html">PROGRESS</a></li>
-                        <li><a href="team.html">THE TEAM</a></li>
-                    </ul>
-                </div>
-            </nav>
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+}
+nav img{
+    width: 150px;
+    position: relative;
+}
 
-    </head>
-    <body>
-        
-            
+.nav-links{
+    flex: 1;
+    text-align: center;
+    position: fixed;
+  top: 6%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
 
-        <section class="body">
-            <div class="grid">
-                <div class="grid-item">
-                    <a href="index.html"><img src="photos/mohanad-website.jpeg"></a>
-                    <p class="name">Mohanad Ibrahiem</p>
-                    <p class="position">PM/ Hardware Lead</p>
-                    <p class="degree">Electrical Engineering</p>
-                    
-                    <a href="https://www.linkedin.com/in/mohanad-ibrahiem-317b8019b/">
-                        <img class="linkedin-image" src="photos/linkedin.png">
-                    </a>
-                </div>
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 12px 12px;
+    position: relative;
+}
 
-                <div class="grid-item">
-                    <a href="index.html"><img src="photos/michael-website.png"></a>
-                    <p class="name">Michael Tagg</p>
-                    <p class="position">Software Lead</p>
-                    <p class="degree">Electrical Engineering </p>
-                    
-                    <a href="https://www.linkedin.com/in/michael-tagg-9aa9411a2/">
-                        <img class="linkedin-image" src="photos/linkedin.png">
-                    </a>
-                </div>
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 30px;
+    
+}
+.nav-links ul li::after{
+    content:'';
+    width: 0%;
+    height: 2px;
+    background: #2FAA9E;;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align:  center;
+}
+.text-box h1{
+    font-size: 62px;
+}
+.text-box h2{
+    font-size: 62px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: #fff;
+}
+.progress-link{
+    display:inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.progress-link:hover{
+    border: 1px solid #2FAA9E;
+    background: #2FAA9E;
+    transition: 1s;
+}
+body {
+    height: 100%;
+    overflow-y: hidden;
+ }
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background: #2FAA9E;
+        width: 200px;
+        text-align: center;
+    }
+}
+.grid
+ {
+  display: grid;
+  grid-template-columns: repeat(3,400px);  /* 3 columns */
+  grid-template-rows: repeat(3,300px); /* 3 rows  */
+  grid-gap: 0px 0px;  
+  align-items: center;
+  justify-content: center;
+  
+}
 
-                <div class="grid-item">
-                    <a href="index.html"><img src="photos/anish-website.jpeg"></a>
-                    <p class="name">Anish Patel</p>
-                    <p class="position">Mechanical Lead</p>
-                    <p class="degree">Mechanical Engineering</p>
-                    
-                    <a href="https://www.linkedin.com/in/anishpatel321/">
-                        <img class="linkedin-image" src="photos/linkedin.png">
-                    </a>
-                </div>
+.grid-item{
+  padding:30px;
+  padding-top: 100px;
+}
 
-                <div class="grid-item">
-                    <a href="index.html"><img src="photos/miki-website.jpeg"></a>
-                    <p class="name">Miki Rowbottom</p>
-                    <p class="position">Business Lead</p>
-                    <p class="degree">Electrical Engineering</p>
-                    
-                    <a href="https://www.linkedin.com/in/miki-rowbottom">
-                        <img class="linkedin-image" src="photos/linkedin.png">
-                    </a>
-                </div>
+img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+}
+.name{
+    font-size: 27px;
+    text-align: center;
+    color: #fff;
+}
+.position{
+    text-align: center;
+    color: #fff;
+    font-family: sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 
-                <div class="grid-item">
-                    <a href="index.html"><img src="photos/adam-website.jpeg"></a>
-
-                        <p class="name">Adam Pezoulas </p>
-
-                        <p class="position">Hardware/ Software</p>
-                            
-                        <p class="degree">Electrical Engineering</p>
-                        
-                        
-
-                    
-                    
-                    
-                    <a href="https://www.linkedin.com/in/adam-pezoulas/">
-                        <img class="linkedin-image" src="photos/linkedin.png">
-                    </a>
-                </div>
-
-                <div class="grid-item"><a href="index.html"><img src="photos/yaashi-website.jpeg"></a>
-                    <p class="name">Yaashi Pathak</p>
-                    <p class="position">Business/ Mechanical</p>
-                    <p class="degree">Mechanical Engineering</p>
-                    
-                    <a href="https://www.linkedin.com/in/yaashi-pathak/">
-                        <img class="linkedin-image" src="photos/linkedin.png">
-                    </a>
-                </div>
-              </div>
-
-        <div>
-            
-            
-        </div>
-        </section>
-    </body>
-</html>
+}
+.degree{
+    text-align: center;
+    color: #fff;
+    font-family: sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+}
+.linkedin-image{
+    position: relative;
+    display: block;
+    margin-left: 220px;
+    width: 15%;
+    top: -130px;
+    right: 15px;
+}
