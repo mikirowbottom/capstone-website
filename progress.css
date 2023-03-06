@@ -267,3 +267,7 @@ body{
 .product-animation{
   overflow: hidden;
 }
+.final_design{
+  display: block;
+  width: 100%;
+}
