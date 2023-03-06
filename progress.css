@@ -181,7 +181,6 @@ body{
   .wrapper nav label:hover{
     background: rgba(135, 142, 143, 0.3);
     border-radius: 0px;
-
     clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 12% 50%, 0% 0%);
 
   }
@@ -210,19 +209,19 @@ body{
     display: none;
   }
   #ourstory:checked ~ nav .slider{
-    left: 4.2%;
+    left: 7%;
   }
   #page1:checked ~ nav .slider{
-    left: 21.5%;
+    left: 29%;
   }
   #page2:checked ~ nav .slider{
-    left: 39%;
+    left: 51%;
   }
   #page3:checked ~ nav .slider{
     left: 56.5%;
   }
   #page4:checked ~ nav .slider{
-    left: 74%;
+    left: 73%;
   }
   section .content{
     display: none;
@@ -261,4 +260,11 @@ body{
 .design_overview{
   display: block;
   width: 100%;
+}
+.our_story{
+  display: block;
+  width: 100%;
+}
+.product-animation{
+  overflow: hidden;
 }
