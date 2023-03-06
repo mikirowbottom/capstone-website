@@ -243,10 +243,9 @@ body{
   section .content p{
   text-align: center;
   }
-  .prototype1_photos{
+  .prototype1{
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
   }
 .axis{
   float: left;
